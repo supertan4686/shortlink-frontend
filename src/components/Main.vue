@@ -3,6 +3,11 @@
     <Navbar></Navbar>
     <b-container>
       <b-row>
+        <b-col cols="12" style="margin-top:30px;">
+          <h1>Statistic of click shortlink</h1>
+        </b-col>
+      </b-row>
+      <b-row>
         <b-col cols="12">
           <b-table striped hover 
             :items="getStatlinks" 
