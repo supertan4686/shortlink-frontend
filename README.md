@@ -1,8 +1,8 @@
 # shortlink-frontend
 
-> เป็นส่วนหน้าบ้านที่ใช้ในการ test เว็บย่อลิงค์
+> เป็นส่วนหน้าบ้านที่ใช้ในการ test เว็บย่อลิงค์ ใช้ Vue.js และ library ต่างๆของ Vue.js, bootstrap ในการทำครับ
 
-## Build Setup
+## วิธีการใช้
 
 ``` เมื่อ clone หรือติดตั้งมาแล้วให้ทำตามดังนี้ 
 ไปเปิด project shortlink-backend ก่อนนะครับ ถ้าเปิดแล้วจากไปที่ command แล้วเข้าไปที่ folder project นี้แล้วพิมพ์คำสั่งดังนี้
