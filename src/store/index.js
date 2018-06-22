@@ -10,7 +10,8 @@ const mainurl = 'http://localhost:8080/'
 const state = {
   'statLinks': [],
   'shortlink': '',
-  'reallink': ''
+  'reallink': '',
+  'checklogin': ''
 }
 const mutations = {
   setStatlinks (state, statLinks) {
@@ -21,6 +22,9 @@ const mutations = {
   },
   setReallink (state, reallink) {
     state.reallink = reallink
+  },
+  setCheckLogin (state, checklogin) {
+    state.checklogin = checklogin
   }
 }
 const actions = {
@@ -37,15 +41,19 @@ const actions = {
   async getReallink ({commit}, shortlink) {
     const url = apiurl + 'get/' + shortlink
     const response = await axios.get(url)
-    console.log(response.data.reallink)
     commit('setReallink', response.data.reallink)
+  },
+  async adminLogin ({commit}, data) {
+    const url = apiurl + 'login'
+    const response = await axios.post(url, data)
+    commit('setCheckLogin', response.data.message)
   }
 }
 const getters = {
   getStatlinks: state => state.statLinks,
   getShortlink: state => state.shortlink,
-  resultReallink: state => state.reallink
-
+  resultReallink: state => state.reallink,
+  getLoginData: state => state.checklogin
 }
 export default new Vuex.Store({
   state,
