@@ -10,16 +10,6 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/:shortlink',
-      name: 'Main',
-      component: Main
-    },
-    {
-      path: '/',
-      name: 'Gen',
-      component: Gen
-    },
-    {
       path: '/admin/login',
       name: 'Login',
       component: Login
@@ -28,6 +18,16 @@ export default new Router({
       path: '/admin',
       name: 'Admin',
       component: Admin
+    },
+    {
+      path: '/',
+      name: 'Gen',
+      component: Gen
+    },
+    {
+      path: '/:shortlink',
+      name: 'Main',
+      component: Main
     }
   ],
   mode: 'history'

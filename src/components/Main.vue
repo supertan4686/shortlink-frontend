@@ -7,7 +7,14 @@
     created () {
       let query = this.$route.params.shortlink
       this.getReallink(query).then(() => {
-        window.location.href = this.resultReallink
+        let checkhttp = this.resultReallink.split('/')
+        let redirecturl = ''
+        if (checkhttp.includes('http:') || checkhttp.includes('https:')) {
+          redirecturl = this.resultReallink
+        } else {
+          redirecturl = 'http://' + this.resultReallink
+        }
+        window.location.href = redirecturl
       })
     },
     computed: {
